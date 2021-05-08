@@ -190,8 +190,8 @@ class RendomPlayerState extends State<RendomPlayerScreen> {
     print(rang);
     Player a = p.show(rang);
     Provider.of<SelectTeamProvider>(context, listen: false).addTeamA(a);
-
-    p.deleteAt(rang);
+    //Provider.of<SelectPlayerProvider>(context, listen: false).deleteAt(rang);
+     p.deleteAt(rang);
     setState(() {
       _playerA.text = a.name;
       //stateOnlyText = ButtonState.success;
@@ -204,7 +204,8 @@ class RendomPlayerState extends State<RendomPlayerScreen> {
     print(rang);
     Player a = p.show(rang);
     Provider.of<SelectTeamProvider>(context, listen: false).addTeamB(a);
-    p.deleteAt(rang);
+    //Provider.of<SelectPlayerProvider>(context, listen: false).deleteAt(rang);
+      p.deleteAt(rang);
     setState(() {
       _playerB.text = a.name;
       stateOnlyText = ButtonState.success;
@@ -221,11 +222,11 @@ class RendomPlayerState extends State<RendomPlayerScreen> {
     }
   }
 
-  selectRemplacant(int p) {
+  /* selectRemplacant(int p) {
     Random random = new Random();
     int rang = random.nextInt(p);
     print("range $rang");
 
     Provider.of<SelectPlayerProvider>(context, listen: false).deleteAt(rang);
-  }
+  } */
 }

@@ -46,7 +46,7 @@ class _TeamScreenState extends State<TeamScreen> {
             ),
             Expanded(
               flex: 3,
-              child: Item(load.teamA, Colors.white),
+              child: Item(load.teamB, Colors.white),
             ),
             SizedBox(
               height: 5.0,
